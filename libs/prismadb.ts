@@ -6,7 +6,7 @@ declare global {
 
 const client = globalThis.client || new PrismaClient();
 
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== "production") {
   globalThis.client = client;
 }
 

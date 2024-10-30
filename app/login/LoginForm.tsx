@@ -97,7 +97,7 @@ const LoginForm = () => {
         onClick={handleSubmit(onSubmit)}
       />
       <p className="text-sm">
-        D'ont have an account?{" "}
+        D&apos;ont have an account?{" "}
         <Link href="/register" className="underline">
           Sign Up
         </Link>

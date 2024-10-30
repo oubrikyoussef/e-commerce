@@ -17,6 +17,7 @@ export const AddProductReview: React.FC<IAddProductReview> = ({
   product,
   user,
 }) => {
+  const [isLoading, setIsLoading] = useState(false);
   if (!product || !user) return null;
 
   const isProductDelivered = user.orders.some(
@@ -30,7 +31,6 @@ export const AddProductReview: React.FC<IAddProductReview> = ({
   );
   if (hasAlreadyRated) return null;
 
-  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
   const {
     register,

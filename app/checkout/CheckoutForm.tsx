@@ -12,6 +12,7 @@ import Button from "../components/Button";
 import { formatPrice } from "../utils/functions/numbers";
 
 export const CheckoutForm = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const {
     cartTotalAmount,
     clearCart,
@@ -22,7 +23,6 @@ export const CheckoutForm = () => {
   const elements = useElements();
   if (!stripe || !elements) return;
 
-  const [isLoading, setIsLoading] = useState(false);
   const formattedPrice = formatPrice(cartTotalAmount);
 
   const handleSubmit = async (e: React.FormEvent) => {
